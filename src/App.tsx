@@ -45,7 +45,6 @@ function App() {
   }
 
   const handleSave = async (updateTitle: string) => {
-    console.log('Content being saved: ', content)
     const { data, error } = await supabase
       .from('notes')
       .update({
@@ -55,6 +54,7 @@ function App() {
       .eq('id', currentNote!.id)
     if (!error) {
       await fetchNotes()
+      console.log(data)
     } else {
       handleFetchError(3)
     }
@@ -78,6 +78,7 @@ function App() {
     if (!error) {
       await fetchNotes()
       setCurrentNote(notes![notes!.length - 1])
+      console.log(data)
     } else {
       handleFetchError(1)
     }
@@ -89,6 +90,7 @@ function App() {
       await fetchNotes()
       setCurrentNote(null)
       setContent('')
+      console.log(data)
     } else {
       handleFetchError(4)
     }

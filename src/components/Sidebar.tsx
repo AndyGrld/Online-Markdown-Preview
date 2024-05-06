@@ -38,8 +38,7 @@ const Sidebar: React.FC<Props> = ({ handleSetTheme, notes, createNew, handleCurr
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    const options = { year: 'numeric', month: 'long', day: 'numeric' }
-    const formattedDate = date.toLocaleDateString('en-GB', options)
+    const formattedDate = date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
     return formattedDate
   }
 
