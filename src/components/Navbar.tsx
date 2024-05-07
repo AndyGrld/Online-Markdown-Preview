@@ -51,7 +51,7 @@ const Navbar: React.FC<Props> = ({ handleSetSidebar, showSidebar, handleDelete, 
           {currentNote &&
             <div className="document_name">
               <div className="line"></div>
-              <img src="/public/icon-document.svg" alt="" />
+              <img src="/icon-document.svg" alt="" />
               <div className="d_name">
                 <p>Document Name</p>
                 <input type='text' value={filename || 'untitled.md'} onChange={handleFilenameChange} />

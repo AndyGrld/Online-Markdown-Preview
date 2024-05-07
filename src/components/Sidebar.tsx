@@ -56,7 +56,7 @@ const Sidebar: React.FC<Props> = ({ handleSetTheme, notes, createNew, handleCurr
           notes.map((note, index) => {
             return (
               <li key={index} onClick={() => handleCurrentNote(index)}>
-                <img src="/public/icon-document.svg" alt="Document Icon" />
+                <img src="/icon-document.svg" alt="Document Icon" />
                 <div className="list-data">
                   <p>{formatDate(note.created_at)}</p>
                   <p>{note.title}</p>
