@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-This website allows users preview markdown text online
+This website allows users preview markdown text online.
 
 ## Dark Mode
 ![Dark mode](./public/dark.png)
